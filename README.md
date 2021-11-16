@@ -16,6 +16,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * Enter送出、點擊 Add送出 todo後，輸入欄自動淨空
 * ng serve -o 後，會直接把範例上項目當種子資料送出
 
+#Angular #Angular-cli #typescript
 
 
 
