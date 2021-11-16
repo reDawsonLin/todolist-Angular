@@ -1,0 +1,29 @@
+  <body>
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px">My To Do List</h2>
+      <input 
+        #todo 
+        type="text" 
+        id="myInput" 
+        placeholder="Title..."
+        (keyup)="addTodo($event)"
+      >
+      <span (click)="addTask(todo.value); todo.value='' " class="addBtn">Add</span>
+    </div>
+
+    <ul id="myUL" >
+      <div 
+        class="li-container" 
+        *ngFor="let todo of getList(); let i = index"
+        (click)="todo.toggleCompletion()"
+      >
+        <li [class.checked]="todo.done">
+          {{todo.getTitle()}} 
+          <span class="close" (click)="remove(i)">×</span> 
+        </li>
+      </div>
+    </ul>
+  </body>
+
+
+
